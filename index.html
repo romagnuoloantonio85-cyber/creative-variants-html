@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -1163,16 +1164,13 @@
                 
                 const aspectRatio = '9:16'; // SEMPRE 9:16 (verticale per TikTok/Reels)
                 
-                // Crea un prompt SPECIFICO basato sulla variante
-                const customPrompt = `
-UGC-style vertical video (9:16) showcasing VisionClearPro windshield coating product.
-Visual style: Smartphone quality, authentic, direct to camera.
-Scene: Person demonstrating product application on car windshield.
-Key elements: ${variant.body}
-Call-to-action: ${variant.cta}
-Mood: Energetic, trustworthy, problem-solving.
-Duration: 5 seconds.
-`.trim();
+                // Prompt basato sulla variante MA senza testo sullo schermo
+                const customPrompt = `UGC-style vertical video showing a person enthusiastically presenting a product.
+Scene content: ${variant.body || variant.hook || 'Product demonstration'}
+Call-to-action message: ${variant.cta || 'Try it now'}
+Visual style: Natural smartphone quality, authentic gestures, direct to camera, energetic presentation.
+IMPORTANT: NO TEXT, NO WORDS, NO CAPTIONS visible on screen. Pure visual storytelling.
+TikTok aesthetic, smooth motion, 5 seconds duration.`.trim();
                 
                 console.log('📝 Custom Prompt:', customPrompt);
                 
